@@ -8,6 +8,27 @@ module.exports = merge(common, {
 
     devtool: 'inline-source-map',
 
+    module: {
+        rules: [
+            {
+                test: /\.scss$/i,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            plugins: () => [
+                                require("autoprefixer"),
+                            ],
+                        },
+                    },
+                    "sass-loader",
+                ],
+            },
+        ],
+    },
+
     plugins: [
         new webpack.DefinePlugin({
             __DEBUG__: JSON.stringify("true"),

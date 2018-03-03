@@ -4,6 +4,9 @@
 <head>
   <title>Aurelia Client</title>
   <base href="~/" />
+  <environment exclude="Development">
+    <link href="~/dist/app.css" rel="stylesheet" asp-append-version="true" />
+  </environment>
 </head>
 <body>
   <div aurelia-app="main"></div>

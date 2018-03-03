@@ -14,8 +14,12 @@
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
-  <Target Name="WebpackBuild" AfterTargets="Build">
+  <Target Name="WebpackBuild" AfterTargets="Build" Condition="'$(DeployOnBuild)' != 'true'">
     <Exec Command="yarn run build"></Exec>
+  </Target>
+
+  <Target Name="WebpackPublish" AfterTargets="BeforePublish">
+    <Exec Command="yarn run publish"></Exec>
   </Target>
 
 </Project>

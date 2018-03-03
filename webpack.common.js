@@ -22,22 +22,6 @@ module.exports = {
         rules: [
             { test: /\.ts$/i, use: "ts-loader" },
             { test: /\.html$/i, use: "html-loader" },
-            {
-                test: /\.scss$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    {
-                        loader: "postcss-loader",
-                        options: {
-                            plugins: () => [
-                                require("autoprefixer"),
-                            ],
-                        },
-                    },
-                    "sass-loader",
-                ],
-            },
         ],
     },
 
