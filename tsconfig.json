@@ -5,8 +5,10 @@
     "moduleResolution": "node",
     "lib": [ "es6", "dom" ],
     "importHelpers": true,
-
-    "experimentalDecorators": true
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "strict": true
   },
 
   "compileOnSave": false
