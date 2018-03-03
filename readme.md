@@ -18,14 +18,16 @@ Build & Start from VS once and start ```watch``` script on the background (using
 
 Run ```start``` script (using command line or Task Runner). Changes will automatically show up in the browser without refresh, using Hot Module Replacement.
 
-## Current technology choices
+## Publishing
+
+A separate webpack configuration will be used for publishing optimised output and separate css file for production. This is run automatically when publishing from VS.
+
+## Technology choices
 
 - ASP.NET Core 2.0
 - Webpack 4
 - Aurelia
 - Typescript
+- Bootstrap 4
+- Sass
 - Yarn (should work with npm too)
-
-## Planned development
-- Use Bootstrap 4
-- Sass loader config
