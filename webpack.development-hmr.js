@@ -12,7 +12,10 @@ module.exports = merge(development, {
     },
 
     devServer: {
-        contentBase: path.join(__dirname, "webpack-devserver-root"),
+        contentBase: [
+            path.join(__dirname, "webpack-devserver-root"),
+            path.join(__dirname, "wwwroot"),
+        ],
         hot: true,
         historyApiFallback: true,
     },
