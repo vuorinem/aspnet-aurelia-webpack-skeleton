@@ -14,6 +14,7 @@ module.exports = merge(development, {
     devServer: {
         contentBase: path.join(__dirname, "webpack-devserver-root"),
         hot: true,
+        historyApiFallback: true,
     },
 
     plugins: [
