@@ -436,9 +436,23 @@ aurelia-event-aggregator@^1.0.0:
   dependencies:
     aurelia-logging "^1.0.0"
 
-aurelia-framework@^1.0.0, aurelia-framework@^1.1.5:
+aurelia-framework@^1.0.0:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/aurelia-framework/-/aurelia-framework-1.1.5.tgz#fd97d281c02d35bb98032830b0731ec3d2a6c1d7"
+  dependencies:
+    aurelia-binding "^1.0.0"
+    aurelia-dependency-injection "^1.0.0"
+    aurelia-loader "^1.0.0"
+    aurelia-logging "^1.0.0"
+    aurelia-metadata "^1.0.0"
+    aurelia-pal "^1.0.0"
+    aurelia-path "^1.0.0"
+    aurelia-task-queue "^1.0.0"
+    aurelia-templating "^1.0.0"
+
+aurelia-framework@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/aurelia-framework/-/aurelia-framework-1.2.0.tgz#21da578ce7332022a13741cadb2a84cd258641c7"
   dependencies:
     aurelia-binding "^1.0.0"
     aurelia-dependency-injection "^1.0.0"
@@ -517,9 +531,13 @@ aurelia-pal-browser@^1.0.0:
   dependencies:
     aurelia-pal "^1.4.0"
 
-aurelia-pal@^1.0.0, aurelia-pal@^1.1.1, aurelia-pal@^1.3.0, aurelia-pal@^1.4.0, aurelia-pal@^1.5.0:
+aurelia-pal@^1.0.0, aurelia-pal@^1.1.1, aurelia-pal@^1.3.0, aurelia-pal@^1.4.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/aurelia-pal/-/aurelia-pal-1.5.0.tgz#26607538d60a973f73824d75b0bfa91384ce9dd3"
+
+aurelia-pal@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/aurelia-pal/-/aurelia-pal-1.8.0.tgz#b6496fae8b335b8cecb1f8b98434ea4125fd2333"
 
 aurelia-path@^1.0.0:
   version "1.1.1"

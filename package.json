@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "aurelia-bootstrapper": "^2.2.0",
-    "aurelia-framework": "^1.1.5",
-    "aurelia-pal": "^1.5.0"
+    "aurelia-framework": "^1.2.0",
+    "aurelia-pal": "^1.8.0"
   },
   "devDependencies": {
     "aurelia-webpack-plugin": "^3.0.0-rc.1",
