@@ -1,6 +1,6 @@
-﻿const merge = require("webpack-merge");
+const merge = require("webpack-merge");
 const webpack = require("webpack");
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const common = require("./webpack.common.js");
 
@@ -11,21 +11,19 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.scss$/i,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: [
-                        "css-loader",
-                        {
-                            loader: "postcss-loader",
-                            options: {
-                                plugins: () => [
-                                    require("autoprefixer"),
-                                ],
-                            },
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            plugins: () => [
+                                require("autoprefixer"),
+                            ],
                         },
-                        "sass-loader",
-                    ],
-                }),
+                    },
+                    "sass-loader",
+                ],
             },
         ],
     },
@@ -36,6 +34,8 @@ module.exports = merge(common, {
             'process.env.NODE_ENV': JSON.stringify('production'),
             __DEBUG__: JSON.stringify("false"),
         }),
-        new ExtractTextPlugin("app.css"),
+        new MiniCssExtractPlugin({
+            filename: "app.css",
+        }),
     ],
 });
