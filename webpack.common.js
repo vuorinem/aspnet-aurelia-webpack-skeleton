@@ -4,6 +4,12 @@ const { AureliaPlugin } = require("aurelia-webpack-plugin");
 module.exports = {
     entry: {
         main: "aurelia-bootstrapper",
+        vendor: [
+            "bluebird",
+            "jquery",
+            "popper.js",
+            "bootstrap"
+        ],
     },
 
     output: {
