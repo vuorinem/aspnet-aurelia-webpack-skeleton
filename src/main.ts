@@ -2,6 +2,8 @@
 
 import "styles/app.scss";
 
+import 'bootstrap';
+
 declare const __DEBUG__: boolean; // This is defined by Webpack build
 
 export function configure(aurelia: Aurelia) {
