@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Client {
@@ -9,6 +10,13 @@ namespace Client {
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
+            if (env.IsDevelopment()) {
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions {
+                    ConfigFile = "webpack.development.js",
+                    HotModuleReplacement = true,
+                });
+            }
+
             // Serve all static files 
             app.UseStaticFiles();
             app.UseMvc(routes => {
