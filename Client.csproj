@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <Target Name="WebpackPublish" AfterTargets="BeforePublish">
+    <Exec Command="yarn install"></Exec>
     <Exec Command="yarn run publish"></Exec>
   </Target>
 
