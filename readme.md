@@ -1,3 +1,5 @@
+**Notice:** This template uses ASP.NET Core [SPA services that are now obsolete](https://github.com/dotnet/aspnetcore/issues/12890), and will be removed on .NET 5. For new projects, I recommend using [Aurelia CLI](https://aurelia.io/docs/cli/basics).
+
 # ASP.NET Core / Aurelia / Webpack Skeleton
 
 This is a SPA skeleton application for developing on Aurelia with ASP.NET Core server, using Webpack as the module / asset bundler.
